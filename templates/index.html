@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html >
+<html>
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
@@ -19,6 +19,8 @@
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="number" name="win" placeholder="Wins" required="required" />
         <input type="number" name="lost" placeholder="Losses" required="required" />
+        <input type="number" name="pts" placeholder="Scored" required="required" />
+        <input type="number" name="opp_pts" placeholder="Scored against" required="required" />
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
