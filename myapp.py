@@ -25,7 +25,7 @@ def predict():
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
     result = None
-    if prediction == 1:
+    if prediction == [1]:
         result = "This team is going to qualify to the Playoff"
     else:
         result = "This team is not going to qualify to the Playoff"
