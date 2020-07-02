@@ -6,7 +6,7 @@ Created on Fri Jun 26 10:59:24 2020
 """
 
 import numpy as np
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, render_template
 import pickle
 
 app = Flask(__name__)
@@ -24,11 +24,11 @@ def predict():
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
     
-    
-    func = lambda prediction: "Qualify" if prediction==[1] else "Not qualify"
     prediction = model.predict(final_features)
-
-    return render_template('index.html', prediction_text=func)
+    
+    result = prediction+" Playoff"
+    
+    return render_template('index.html', prediction_text=result)
 
 
 if __name__ == "__main__":
