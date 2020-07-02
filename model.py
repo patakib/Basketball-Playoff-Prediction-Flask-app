@@ -129,10 +129,5 @@ pickle.dump(rnd_clf, open('model.pkl','wb'))
 
 # Loading model to compare the results
 model = pickle.load(open('model.pkl','rb'))
-result = model.predict([[4, 6, 100, 1100]])
-if result == [0]:
-    print("Not qualify")
-else:
-    print("Qualify")
-
+print(model.predict([[4, 6, 1000, 1100]]))
 #-----------------
