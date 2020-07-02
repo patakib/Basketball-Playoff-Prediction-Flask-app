@@ -23,10 +23,10 @@ def predict():
     '''
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
-    
+    func = lambda prediction : "This team would qualify to the Playoffs" if prediction==[1] else "This team would not qualify to the Playoffs"
     prediction = model.predict(final_features)
 
-    return render_template('index.html', prediction_text=prediction)
+    return render_template('index.html', prediction_text=func(prediction))
 
 
 if __name__ == "__main__":
