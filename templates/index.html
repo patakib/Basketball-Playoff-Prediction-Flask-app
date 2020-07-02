@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <title>NBA Playoff Prediction</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
  <div class="login">
 	<h1>Predict Playoff Participation in NBA</h1>
+  <h2> The aim of this program is to give you a prediction on playoff participation based on the regular season's first 10 matches. <br>Input data: number of wins, losses and sum of scored points by the team and by the opposites from the first 10 matches. <br>The prediction uses an open-source dataset from Kaggle including all the results of the NBA seasons from 1947 to 2015.
+<br>For training, testing and prediction I used a machine learning algorithm called Random Forest Classifier.</h2>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
@@ -27,7 +27,8 @@
 
    <br>
    <br>
-   {{ prediction_text }}
+   <h2>{{ prediction_text }}</h2>
+
 
  </div>
 
