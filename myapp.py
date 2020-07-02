@@ -24,10 +24,11 @@ def predict():
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
     
+    
+    func = lambda prediction: "Qualify" if prediction==[1] else "Not qualify"
     prediction = model.predict(final_features)
 
-
-    return render_template('index.html', prediction_text=(lambda prediction: "Qualify" if prediction==[1] else "Not qualify")
+    return render_template('index.html', prediction_text=func
 
 
 if __name__ == "__main__":
