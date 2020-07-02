@@ -6,7 +6,7 @@ Created on Fri Jun 26 10:59:24 2020
 """
 
 import numpy as np
-from flask import Flask, request, render_template
+from flask import Flask, request, jsonify, render_template
 import pickle
 
 app = Flask(__name__)
@@ -25,10 +25,8 @@ def predict():
     final_features = [np.array(int_features)]
     
     prediction = model.predict(final_features)
-    
-    result = prediction+" Playoff"
-    
-    return render_template('index.html', prediction_text=result)
+
+    return render_template('index.html', prediction_text=prediction)
 
 
 if __name__ == "__main__":
