@@ -28,7 +28,7 @@ def predict():
     func = lambda prediction: "Qualify" if prediction==[1] else "Not qualify"
     prediction = model.predict(final_features)
 
-    return render_template('index.html', prediction_text=func
+    return render_template('index.html', prediction_text=func)
 
 
 if __name__ == "__main__":
