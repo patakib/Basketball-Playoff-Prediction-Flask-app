@@ -7,3 +7,7 @@ If the predicted value is 1, the team would participate in Playoffs, if the resu
 Link to the app: https://nba-playoff-prediction-api.herokuapp.com
   
   There is a lot more to come regarding this app, I just wanted to create the structure and the deployment to have a skeleton which I can build on in the coming weeks.
+
+Resources:
+Inspiration for using Flask for ML project: Krish Naik - https://github.com/krishnaik06
+Original video for deployment: https://www.youtube.com/watch?v=mrExsjcvF4o&list=PLZoTAELRMXVOAvUbePX1lTdxQR8EY35Z1
